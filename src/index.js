@@ -14,7 +14,7 @@ import './index.css';
 
 const store = createStore(rootReducer,
   compose(
-    applyMiddleware(thunk.withExtraArguments({ getFirebase, getFirestore })),
+    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
     reduxFirestore(fbConfig),
     reactReduxFirebase(fbConfig)
   )
